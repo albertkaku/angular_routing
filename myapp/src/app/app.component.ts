@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FoodItem }  from './app.foodItem';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
@@ -9,12 +10,14 @@ import { FoodItem }  from './app.foodItem';
 export class AppComponent {
   title = 'app';
   items;
+  index;
 
   constructor() {
-    if (sessionStorage.getItem("autosave")) {
-      this.items = sessionStorage.getItem("autosave");
-    } else {
-      this.items = FOODITEMS;
+    this.index = 0;
+    this.items = FOODITEMS;
+    if (!sessionStorage.getItem("item0")) {
+      for(; this.index < this.items.length; this.index++)
+      sessionStorage.setItem("item" + this.index, JSON.stringify(FOODITEMS[this.index]));
     }
   }
 }

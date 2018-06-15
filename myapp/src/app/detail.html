@@ -1,0 +1,24 @@
+
+<table><tr  *ngFor="let item of items"><td><a>{{item.id}}</a> </td> <td>{{item.name}}</td> </tr> </table>
+<table width="200" >
+    <tr align="right">
+        <td width="55%">Product ID:</td>
+        <td>{{item.id}}</td>
+    </tr>
+    <tr align="right">
+        <td>Product Name:</td>
+        <td>{{item.name}}</td>
+    </tr>
+    <tr align="right">
+        <td >Manufacturer:</td>
+        <td>{{item.mfg}}</td>
+    </tr>
+    <tr align="right">
+        <td>Quantity:</td>
+        <td>{{item.qty}}</td>
+    </tr>
+    <tr align="right">
+        <td>Pack Size:</td>
+        <td>{{item.pkg}}</td>
+    </tr>
+</table>

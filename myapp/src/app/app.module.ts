@@ -3,13 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { routing }      from './app.routing';
+import { PageHomeComponent } from './app.page-home';
+import { PageAboutComponent } from './app.page-about';
+import { PageDetailComponent } from './app.page-detail';
+import { MyFooterComponent } from './app.footer';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, PageHomeComponent, PageAboutComponent,
+    PageDetailComponent, MyFooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, routing
   ],
   providers: [],
   bootstrap: [AppComponent]
